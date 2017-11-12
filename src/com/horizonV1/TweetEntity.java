@@ -7,5 +7,8 @@ public class TweetEntity {
 	public float Positive;
 	
 	public float Negative;
-
+	
+	public String ProfileImage;
+	 
+	public String Name;
 }

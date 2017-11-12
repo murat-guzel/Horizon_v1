@@ -1,6 +1,7 @@
 package com.horizonV1;
 
  
+
 import java.util.ArrayList;
 
 import twitter4j.Query;
@@ -9,6 +10,7 @@ import twitter4j.Status;
 import twitter4j.Twitter;
 import twitter4j.TwitterException;
 import twitter4j.TwitterFactory;
+import twitter4j.User;
 import twitter4j.conf.ConfigurationBuilder;
  
 
@@ -23,10 +25,14 @@ public class TwitterSearch {
 	    ArrayList<TweetEntity> tweetList = new ArrayList<TweetEntity>();
 		try {
 			result = twitter.search(query);
+			
 			 for (Status status : result.getTweets()) {
 			        System.out.println("@" + status.getUser().getScreenName() + ":" + status.getText());
 			        TweetEntity tweet = new TweetEntity();
 			        tweet.Content = status.getText();
+			        User user = status.getUser();
+			        tweet.ProfileImage = user.getProfileImageURL();
+			        tweet.Name = user.getName();
 			        tweetList.add(tweet);
 			    }
 			 

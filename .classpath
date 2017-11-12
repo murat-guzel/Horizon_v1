@@ -14,5 +14,6 @@
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/kafka_2.10-0.8.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Murat Güzel/Downloads/json-simple-1.1.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
